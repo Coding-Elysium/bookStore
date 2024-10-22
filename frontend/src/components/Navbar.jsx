@@ -16,7 +16,7 @@ const navigation = [
   },
   {
     name: "Orders",
-    href: "/order",
+    href: "/orders",
   },
   {
     name: "Cart Page",
@@ -73,12 +73,15 @@ const Navbar = () => {
                   <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2">
                     <ul className="text-left">
                       {navigation.map((items) => (
-                        <li
-                          key={items.name}
-                          className="px-4 py-2 hover:bg-gray-100"
-                        >
-                          <Link to={items.href}>{items.name}</Link>
-                        </li>
+                        <Link to={items.href}>
+                          <li
+                            onClick={() => setisDropdownOpen(false)}
+                            key={items.name}
+                            className="px-4 py-2 hover:bg-gray-100"
+                          >
+                            {items.name}
+                          </li>
+                        </Link>
                       ))}
                     </ul>
                   </div>
