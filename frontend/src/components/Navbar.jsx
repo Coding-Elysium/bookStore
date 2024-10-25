@@ -34,7 +34,7 @@ const navigation = [
 
 const Navbar = () => {
   const [isDropdownOpen, setisDropdownOpen] = useState(false);
-  const currentUser = true; // Simulated current user state
+  const currentUser = false; // Simulated current user state
 
   const toggleDropdown = () => {
     setisDropdownOpen(!isDropdownOpen);
